@@ -72,20 +72,16 @@ function App() {
         axios.post(`https://reqres.in/api/users`, newUser)
           .then(res => {
             setUsers([...users, newUser])
-            setFormValues(initialFormValues)   
-            
+            setFormValues(initialFormValues) 
           })
           .catch(err => {
             debugger
           })
-       
     }
 
 
   return (
     <>
-      <h1>howdy</h1>
-      
       <Form 
         submit={submit}
         change={change}
